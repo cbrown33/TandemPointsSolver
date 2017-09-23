@@ -10,11 +10,16 @@ public class TPSolver {
             return;
         }
         TandemPoints game = new TandemPoints(args[0]);
+        game.printBoard();
         if (game.validate()){
             System.out.println("Validated.");
         } else {
-            System.out.println("Game is invalid.  Possibly print why.");
+            System.out.println("Game is invalid.");
         }
+
+    }
+
+    public void solve(TandemPoints game){
 
     }
 }
