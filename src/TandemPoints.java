@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 
 /**
  * This class is the representation of the Tandem Points game.

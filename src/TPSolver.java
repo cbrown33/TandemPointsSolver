@@ -5,6 +5,7 @@
  */
 public class TPSolver {
     public static void main(String[] args) {
+        long time = System.currentTimeMillis();
         if(args.length != 1 || !args[0].startsWith("{") || !args[0].endsWith("}")){
             System.out.println("Usage: java TPSolver \"{x1, x2, ...}\"");
             return;
@@ -12,11 +13,12 @@ public class TPSolver {
         TandemPoints game = new TandemPoints(args[0]);
         System.out.println("The input board is: " + game.toString());
         if (game.validate()){
-            System.out.println("Validated.");
+            System.out.println("Game is valid.");
         } else {
             System.out.println("Game is invalid.");
         }
         ImpartialGameTree tree = new ImpartialGameTree(game);
-        System.out.println(tree.getTreeClass());
+        System.out.println("The game belongs to the outcome class: " + tree.getTreeClass());
+        System.out.println("Time elapsed = " + (System.currentTimeMillis() - time) + " ms.");
     }
 }

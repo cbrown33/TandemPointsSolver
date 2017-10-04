@@ -52,7 +52,7 @@ public class ImpartialGameTree {
 
             // based on boolean values resolve tree to one outcome class
             if (leftLP && rightRP){
-                treeClass = OutcomeClass.P;
+                treeClass = OutcomeClass.N;
             }
             if (leftLP && !rightRP){
                 treeClass = OutcomeClass.L;
@@ -61,11 +61,11 @@ public class ImpartialGameTree {
                 treeClass = OutcomeClass.R;
             }
             if (!leftLP && !rightRP){
-                treeClass = OutcomeClass.N;
+                treeClass = OutcomeClass.P;
             }
             return treeClass;
         }
-        treeClass = OutcomeClass.R;
+        treeClass = OutcomeClass.P;
         return treeClass;                                                  // previous wins if no move available
     }
 
