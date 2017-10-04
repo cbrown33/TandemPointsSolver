@@ -10,16 +10,13 @@ public class TPSolver {
             return;
         }
         TandemPoints game = new TandemPoints(args[0]);
-        game.printBoard();
+        System.out.println("The input board is: " + game.toString());
         if (game.validate()){
             System.out.println("Validated.");
         } else {
             System.out.println("Game is invalid.");
         }
-
-    }
-
-    public void solve(TandemPoints game){
-
+        ImpartialGameTree tree = new ImpartialGameTree(game);
+        System.out.println(tree.getTreeClass());
     }
 }
